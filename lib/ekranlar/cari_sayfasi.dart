@@ -97,26 +97,31 @@ class _CariSayfasiState extends State<CariSayfasi> {
   void _urunGuncelle(BuildContext context, int index) async {
     Cari cari = _cariler[index];
      String sonuc=await _pencereAc(context, "Cari Güncelle")??"";
+     print(sonuc);
+     cari.adi=sonuc;
+     debugPrint(cari.id.toString());
+    debugPrint(cari.adi.toString());
+    debugPrint(cari.yetkili.toString());
+    debugPrint(cari.kod.toString());
      _uzakVeriTabani.guncelCari(cari);
     //
     // List<dynamic> sonuc = await _pencereAc(context, "Kitap Güncelle",
     //     mevcutIsim: cari.isim, mevcutKategori: kitap.kategori) ??
     //     [] ;
     //
-     if (sonuc.isNotEmpty) {
-      String yeniCariAdi = sonuc;
-    //   int yeniKategori = sonuc[1];
-    //
-    //   if (yeniKitapAdi != kitap.isim || yeniKategori != kitap.kategori) {
-    //     if (yeniKitapAdi.isNotEmpty) {
-    //       kitap.isim = yeniKitapAdi;
-       }
+    //  if (sonuc.isNotEmpty) {
+    //   String yeniCariAdi = sonuc;
+    // //   int yeniKategori = sonuc[1];
+    // //
+    // //   if (yeniKitapAdi != kitap.isim || yeniKategori != kitap.kategori) {
+    // //     if (yeniKitapAdi.isNotEmpty) {
+    // //       kitap.isim = yeniKitapAdi;
+    //    }
     //     kitap.kategori = yeniKategori;
-       int guncellenenSatirSayisi = await _uzakVeriTabani.updateCari(cari);
-        if (guncellenenSatirSayisi > 0) {
-          print("güncellendi");
+    //    int guncellenenSatirSayisi = await _uzakVeriTabani.updateCari(cari);
+    //     if (guncellenenSatirSayisi > 0) {
           setState(() {});
-        }
+        // }
     //   }
     // }
   }

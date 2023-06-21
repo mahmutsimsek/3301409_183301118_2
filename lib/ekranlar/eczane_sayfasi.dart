@@ -97,12 +97,7 @@ class _eczaneState extends State<eczane> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Fetch Data Example',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold(
+    return  Scaffold(
         appBar: AppBar(
           title: const Text('Nöcetçi Eczane'),
         ),
@@ -144,7 +139,7 @@ class _eczaneState extends State<eczane> {
               return const CircularProgressIndicator();
             },
           ),
-        ),
+
       ),
     );
   }

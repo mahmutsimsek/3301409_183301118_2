@@ -21,13 +21,7 @@ class UzakVeriTabani {
         .set(cari.mapeDonustur());
     return "";
   }
-  Future<String> guncelCari(Cari cari) async {
-    await _veriTabani
-        .collection(_carilerKoleksiyonAdi)
-        .doc(cari.id)
-        .set(cari.mapeDonustur());
-    return "";
-  }
+
 
   Future<List<Cari>> readTumCariler() async {
     List<Cari> cariler = [];
@@ -82,7 +76,14 @@ class UzakVeriTabani {
     return 1;
     return 0;
   }
-
+  Future<String> guncelCari(Cari cari) async {
+    print(cari.id);
+    await _veriTabani
+        .collection(_carilerKoleksiyonAdi)
+        .doc(cari.id.toString())
+        .update(cari.mapeDonustur());
+    return "";
+  }
   Future<int> deleteCari(Cari cari) async {
     await _veriTabani.collection(_carilerKoleksiyonAdi).doc(cari.id).delete();
     return 1;
