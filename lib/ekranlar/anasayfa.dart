@@ -4,6 +4,7 @@ import 'package:muhasebeyeni/ekranlar/eczane_sayfasi.dart';
 import 'package:muhasebeyeni/model/urun.dart';
 import 'package:muhasebeyeni/veritabani/yerel_veri_tabani.dart';
 
+import '../file/file_operations.dart';
 import 'cari_sayfasi.dart';
 import 'giris_sayfasi.dart';
 
@@ -29,7 +30,8 @@ class _anaSayfaState extends State<anaSayfa> {
           //backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           actions: [
 
-            IconButton(onPressed: (){_cariSayfasiniAc(context);},  icon: Icon(Icons.folder_open_outlined)),
+            IconButton(onPressed: (){_cariSayfasiniAc(context);},  icon: Icon(Icons.request_page)),
+            IconButton(onPressed: (){_dosyaSayfasiniAc(context);},  icon: Icon(Icons.drive_folder_upload_rounded)),
             IconButton(onPressed:() {_eczaneAc(context);},icon: Icon(Icons.local_pharmacy)),
             IconButton(
                 onPressed: () {
@@ -180,5 +182,13 @@ class _anaSayfaState extends State<anaSayfa> {
         );
       },
     );
+  }
+
+  void _dosyaSayfasiniAc(BuildContext context) {
+    MaterialPageRoute sayfaYolu =
+    MaterialPageRoute(builder: (BuildContext context) {
+      return FileOperationsScreen();
+    });
+    Navigator.push (context, sayfaYolu);
   }
 }

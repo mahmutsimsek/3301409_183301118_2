@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:muhasebeyeni/ekranlar/acilis_sayfasi.dart';
 import 'package:muhasebeyeni/ekranlar/eczane_sayfasi.dart';
 import 'ekranlar/cari_sayfasi.dart';
+import 'file/file_operations.dart';
 import 'firebase_options.dart';
 
 
@@ -48,6 +49,7 @@ class MyApp extends StatelessWidget {
       home: //const MyHomePage(title: 'Flutter Demo Home Page'),
       //GirisSayfasi()
      AcilisSayfasi(),
+      //FileOperationsScreen()
       //eczane()
       //CariSayfasi(),
     );
