@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "403318644220",
+    "project_id": "muhasebeyeni-d4f17",
+    "storage_bucket": "muhasebeyeni-d4f17.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403318644220:android:54a3b01fcb79876133e679",
+        "android_client_info": {
+          "package_name": "com.mahmut.muhasebe.muhasebeyeni"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403318644220-hrip407rvqd6v4aon8vaq3st3ij376fo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwzIk_2FxHHcO0Jz2bcDJkMYsewmJdu8o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "403318644220-hrip407rvqd6v4aon8vaq3st3ij376fo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
